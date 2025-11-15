@@ -298,7 +298,7 @@ __pycache__/
 
 Step 3: Add GitHub Actions Workflow
 
-.github/workflows/ci-dockerhub.yml
+.github/workflows/ci-dockerhub.yml              mkdir -p .github/workflows   code .github/workflows/ci-dockerhub.yml
 
 name: ci-dockerhub
 on:
@@ -378,7 +378,9 @@ DOCKERHUB_USERNAME
 DOCKERHUB_TOKEN
 
 Step 6: Verify Image
-
+---git add .github/workflows/ci-dockerhub.yml
+---git commit -m "Add CI DockerHub workflow"
+---git push origin main
 Go to GitHub → Actions tab → view logs → check Docker Hub repository
 ✅ Image: docker.io/<DOCKERHUB_USERNAME>/python-ci-lab
 
